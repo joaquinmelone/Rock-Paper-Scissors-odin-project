@@ -51,4 +51,45 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+
+    let ScorePlayer = 0
+    let ScoreComputer = 0
+    let RoundNumber = 1
+
+    for (let i = 0; i < 5; i++) {
+
+        player = prompt()
+        computer = getComputerChoice()
+
+        if (playRound(player, computer) === true) {
+            ScorePlayer++
+            
+            console.log(`Round ${RoundNumber}. You Win! ${player} beats ${computer}`)
+        }
+        else if (playRound(player, computer) === false) {
+            ScoreComputer++
+
+            console.log(`Round ${RoundNumber}. You Lose! ${computer} beats ${player}`)
+        }
+        else {
+            console.log(`Round ${RoundNumber}. It's a draw!`)
+        }
+
+        RoundNumber++
+    }
+
+    if (ScorePlayer > ScoreComputer) {
+        console.log(`FINAL RESULT: You've Won!`)
+    }
+    else if (ScorePlayer < ScoreComputer) {
+        console.log(`FINAL RESULT: You've Lost!`)
+    }
+    else {
+        console.log(`FINAL RESULT: Draw`)
+    }
+}
+
+game()
+
 
