@@ -1,1 +1,3 @@
 # Rock-Paper-Scissors-odin-project
+
+Rock Paper Scissors it's a simple and short project in which I tried to recreate a game of Rock Paper Scissors. It prompts the user to input a selection and then competes against the computer (using a couple of if statements and a loop), which selects another thing using a random number function. The game lives in the console, but a user interface is going to be added later on another project.
